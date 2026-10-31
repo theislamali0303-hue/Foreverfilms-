@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forever Films | Wedding Videography</title>
+<meta name="description" content="Forever Films - cinematic wedding films that keep your love story alive forever.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6f0;--ink:#2a2420;--muted:#7a6f66;--gold:#b08a4e;--dark:#1b1613;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-weight:300}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.15}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:16px 20px;background:rgba(27,22,19,.85);backdrop-filter:blur(8px)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:#fff;letter-spacing:.08em}
+.logo span{color:var(--gold);font-style:italic}
+nav .links{display:flex;gap:18px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#e9e1d6}
+@media(max-width:640px){nav .links a:not(.cta-nav){display:none}}
+.cta-nav{border:1px solid var(--gold);padding:6px 14px;color:var(--gold)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:100px 24px 60px;color:#fff;background:linear-gradient(rgba(27,22,19,.55),rgba(27,22,19,.75)),linear-gradient(135deg,#6b4a3a,#2a1d18 60%,#b08a4e)}
+.hero small{letter-spacing:.35em;text-transform:uppercase;font-size:.72rem;color:#e3c892}
+.hero h1{font-size:clamp(2.8rem,9vw,5.5rem);margin:16px 0}
+.hero h1 em{color:#e3c892}
+.hero p{max-width:520px;color:#e9e1d6;margin-bottom:32px}
+.btn{display:inline-block;padding:14px 30px;background:var(--gold);color:#fff;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;font-weight:500;border:none;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid #fff;margin-left:8px}
+section{padding:80px 24px;max-width:1050px;margin:auto}
+.eyebrow{letter-spacing:.3em;text-transform:uppercase;font-size:.7rem;color:var(--gold);text-align:center}
+section h2{font-size:clamp(2rem,6vw,3rem);text-align:center;margin:8px 0 40px}
+.about p{max-width:640px;margin:0 auto 16px;text-align:center;color:var(--muted)}
+.stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:36px}
+.stats div{text-align:center}
+.stats b{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold);font-weight:600;display:block}
+.stats span{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.film{position:relative;aspect-ratio:16/10;display:flex;align-items:flex-end;padding:18px;color:#fff;overflow:hidden}
+.film:nth-child(1){background:linear-gradient(160deg,#8a5a44,#2a1d18)}
+.film:nth-child(2){background:linear-gradient(160deg,#5b6b5a,#1c2420)}
+.film:nth-child(3){background:linear-gradient(160deg,#a78a55,#3b2c18)}
+.film::before{content:"▶";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:2rem;opacity:.85}
+.film h3{font-size:1.5rem}.film small{display:block;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:#e3c892}
+.note{text-align:center;font-size:.8rem;color:var(--muted);margin-top:18px}
+.pkg{background:var(--card);padding:34px 26px;text-align:center;border-top:2px solid var(--gold)}
+.pkg.feat{background:var(--dark);color:#fff}
+.pkg h3{font-size:1.7rem}
+.pkg .price{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);margin:8px 0 14px}
+.pkg ul{list-style:none;font-size:.9rem;color:var(--muted)}
+.pkg.feat ul{color:#d8cfc3}
+.pkg li{padding:6px 0;border-bottom:1px solid rgba(128,128,128,.15)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;text-align:center}
+.steps b{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold)}
+.steps h3{font-size:1.3rem;margin:4px 0}.steps p{font-size:.88rem;color:var(--muted)}
+.quote{background:var(--dark);color:#fff;max-width:none}
+.quote .in{max-width:700px;margin:auto;text-align:center}
+.quote blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.7rem;line-height:1.4}
+.quote cite{display:block;margin-top:16px;font-style:normal;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+form{max-width:560px;margin:auto;display:grid;gap:14px}
+input,select,textarea{width:100%;padding:14px;border:1px solid #d9cfc2;background:#fff;font:inherit;font-size:.95rem}
+textarea{min-height:110px}
+.contact-alt{text-align:center;margin-top:26px;color:var(--muted);font-size:.9rem}
+.contact-alt a{color:var(--gold)}
+footer{background:var(--dark);color:#bfb4a7;text-align:center;padding:40px 20px;font-size:.8rem;letter-spacing:.1em}
+footer .logo{display:block;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">Forever <span>Films</span></a>
+  <div class="links">
+    <a href="#films">Films</a><a href="#packages">Packages</a><a href="#contact" class="cta-nav">Enquire</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <small>Wedding Videography</small>
+  <h1>Your love story,<br><em>forever</em> on film</h1>
+  <p>Cinematic wedding films that capture every laugh, tear and heartbeat, so you can relive your big day for a lifetime.</p>
+  <div>
+    <a href="#contact" class="btn">Check Your Date</a>
+    <a href="#films" class="btn ghost">Watch Films</a>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="eyebrow">Our Story</div>
+  <h2>Moments that last a lifetime</h2>
+  <p>At Forever Films, we believe a wedding is more than a day. It's a feeling. We blend candid storytelling with cinematic craft to create films you will want to watch again and again.</p>
+  <p>From the first look to the last dance, we are quietly there, capturing the moments you'll want to remember.</p>
+  <div class="stats">
+    <div><b>150+</b><span>Weddings Filmed</span></div>
+    <div><b>5+</b><span>Years of Experience</span></div>
+    <div><b>100%</b><span>Happy Couples</span></div>
+  </div>
+</section>
+
+<section id="films">
+  <div class="eyebrow">Portfolio</div>
+  <h2>Featured Films</h2>
+  <div class="grid">
+    <a class="film" href="#contact"><div><small>Udaipur</small><h3>Aisha &amp; Rohan</h3></div></a>
+    <a class="film" href="#contact"><div><small>Jaipur</small><h3>Meera &amp; Karan</h3></div></a>
+    <a class="film" href="#contact"><div><small>Goa</small><h3>Sara &amp; Dev</h3></div></a>
+  </div>
+  <p class="note">Replace these tiles with your own YouTube or Vimeo links.</p>
+</section>
+
+<section id="packages">
+  <div class="eyebrow">Investment</div>
+  <h2>Wedding Packages</h2>
+  <div class="grid">
+    <div class="pkg"><h3>Essential</h3><div class="price">₹ 00,000</div>
+      <ul><li>1 day coverage</li><li>1 videographer</li><li>3–5 min highlight film</li><li>HD delivery</li></ul></div>
+    <div class="pkg feat"><h3>Signature</h3><div class="price">₹ 00,000</div>
+      <ul><li>2 days coverage</li><li>2 videographers</li><li>Highlight + full ceremony film</li><li>Drone footage</li><li>4K delivery</li></ul></div>
+    <div class="pkg"><h3>Royal</h3><div class="price">₹ 00,000</div>
+      <ul><li>Full wedding week</li><li>Team of 3+</li><li>Teaser, highlight &amp; documentary</li><li>Drone + same-day edit</li><li>Premium album box</li></ul></div>
+  </div>
+  <p class="note">Every wedding is unique. Packages can be customised.</p>
+</section>
+
+<section id="process">
+  <div class="eyebrow">How It Works</div>
+  <h2>Simple &amp; stress-free</h2>
+  <div class="steps">
+    <div><b>01</b><h3>Say Hello</h3><p>Tell us your date and vision.</p></div>
+    <div><b>02</b><h3>Plan Together</h3><p>We plan coverage around your rituals.</p></div>
+    <div><b>03</b><h3>We Film</h3><p>You enjoy the day; we capture it.</p></div>
+    <div><b>04</b><h3>Relive It</h3><p>Receive your film and keep it forever.</p></div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="in">
+    <blockquote>“Watching our film, we cried all over again. Forever Films captured things we didn't even know happened.”</blockquote>
+    <cite>Aisha &amp; Rohan</cite>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="eyebrow">Let's Talk</div>
+  <h2>Check your wedding date</h2>
+  <form onsubmit="sendWA(event)">
+    <input id="name" placeholder="Your names" required>
+    <input id="date" type="date" required>
+    <input id="venue" placeholder="Wedding city / venue">
+    <textarea id="msg" placeholder="Tell us about your wedding"></textarea>
+    <button class="btn" type="submit">Send on WhatsApp</button>
+  </form>
+  <p class="contact-alt">Or call <a href="tel:+910000000000">+91 00000 00000</a> · <a href="mailto:hello@foreverfilms.in">hello@foreverfilms.in</a><br>Instagram: <a href="https://instagram.com/yourhandle">@yourhandle</a></p>
+</section>
+
+<footer>
+  <a href="#" class="logo">Forever <span>Films</span></a>
+  © <span id="yr"></span> Forever Films. All rights reserved.
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+function sendWA(e){
+  e.preventDefault();
+  var t = "Hi Forever Films! We're "+name.value+". Wedding date: "+date.value+
+          ". Venue: "+(venue.value||"TBD")+". "+msg.value;
+  // Replace 910000000000 with your WhatsApp number (country code + number, no +)
+  window.open("https://wa.me/910000000000?text="+encodeURIComponent(t),"_blank");
+}
+</script>
+</body>
+</html>
